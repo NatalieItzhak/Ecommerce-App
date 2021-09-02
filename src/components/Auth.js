@@ -65,8 +65,6 @@ const Auth = () => {
         if (user) {
           clearInputs();
           setUser(user);
-        } else {
-          setUser('');
         }
       });
     }
