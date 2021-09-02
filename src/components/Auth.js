@@ -69,7 +69,7 @@ const Auth = () => {
       });
     }
     authListener();
-  }, []);
+  }, [setUser]);
 
   return (
     <section className="login">
