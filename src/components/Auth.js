@@ -3,7 +3,7 @@ import fire from "./fire";
 
 const Auth = () => {
   
-  const [user, setUser] = useState('');
+  const [setUser] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassord] = useState('');
   const [emailerr, setEmailErr] = useState('');
@@ -57,9 +57,9 @@ const Auth = () => {
     setPasswordErr('');
   }
 
-  const handleLogout = () => {
-    fire.auth().signOut();
-  }
+  // const handleLogout = () => {
+  //   fire.auth().signOut();
+  // }
 
   const authListener = () => {
     fire.auth().onAuthStateChanged(user => {
@@ -73,7 +73,7 @@ const Auth = () => {
   }
   useEffect(() => {
     authListener();
-  }, []);
+  }, [authListener]);
 
   return (
     <section className="login">

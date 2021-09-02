@@ -27,7 +27,7 @@ export const Cart = () => {
               {items.map((item, index) => {
                 return (
                   <tr key={index}>
-                    <td> <img src={item.image} style={{height: "6rem"}} /></td>
+                    <td> <img alt="item" src={item.image} style={{height: "6rem"}} /></td>
                     <td> {item.title} </td>
                     <td> {item.price} </td>
                     <td>Quantity ({item.quantity} )</td>
