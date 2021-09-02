@@ -24,6 +24,7 @@ const Auth = () => {
           case "auth/wrong.password":
             setPasswordErr(err.message)
             break;
+            default:
 
         }
       });
@@ -43,6 +44,7 @@ const Auth = () => {
           case "auth/weak-password":
             setPasswordErr(err.message)
             break;
+            default:
 
         }
       });
@@ -57,9 +59,9 @@ const Auth = () => {
     setPasswordErr('');
   }
 
-  // const handleLogout = () => {
-  //   fire.auth().signOut();
-  // }
+  const handleLogout = () => {
+    fire.auth().signOut();
+  }
 
   const authListener = () => {
     fire.auth().onAuthStateChanged(user => {
@@ -73,7 +75,7 @@ const Auth = () => {
   }
   useEffect(() => {
     authListener();
-  }, [authListener]);
+  }, []);
 
   return (
     <section className="login">
